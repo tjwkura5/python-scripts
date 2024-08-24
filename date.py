@@ -66,8 +66,9 @@ while True:
     try:
         # Attempt to convert the input to a float
         budget = float(budget)
+        # If the user tries to set the budget below 50 then they're told to stop being cheap
         if budget < 50:
-            print("Stop being cheap! Your budget must be at least $50.")
+            print("Stop being cheap! You should at least budget $50.")
         else:
             break  # Exit the loop if the budget is sufficient
     except ValueError:
@@ -84,48 +85,64 @@ print(json.dumps(menu, indent=4))
 # Function to get item choice and validate
 def get_order_item(category):
     while True:
-        item = input(f"Select a {category} item from the menu: ").strip().lower()
+        item = input(f"Select a(n) {category} item from the menu: ").strip().lower()
         if item in [key.lower() for key in menu[category].keys()]:
             return item
         else:
             print(f"Item not found. Please select a valid {category} item.")
 
-# Initialize total spent
-total_spent = 0
+# Create variables for user and dates running totals
+user_spent = 0
+date_spent = 0
+# sales tax
+tax_rate = 0.0475
 
 # Function to process the order
 def process_order():
-    global total_spent
-    while True:
-        category = input("Enter the category (entrees, appetizers, desserts, beverages): ").strip().lower()
-        if category in menu:
-            item = get_order_item(category)
-            item_info = menu[category][item]
-            print(f"\nYou selected: {item.capitalize()}")
-            print(f"Description: {item_info['description']}")
-            print(f"Price: ${item_info['price']:.2f}")
+    category = input("Enter the category (entrees, appetizers, desserts, beverages): ").strip().lower()
+    if category in menu:
+        item = get_order_item(category)
+        item_info = menu[category][item]
+        print(f"\nYou selected: {item.capitalize()}")
+        print(f"Description: {item_info['description']}")
+        print(f"Price: ${item_info['price']:.2f}")
 
-            # Confirm order
-            confirm = input("Would you like to add this to your order? (yes/no): ").strip().lower()
-            if confirm == 'yes':
-                "placeholder"
-            else:
-                print("Item not added to order.")
-                break
+        confirm = input("Would you like to add this to your order? (yes/no): ").strip().lower()
+        if confirm == 'yes':
+            print(f"Added {item} to your order.")
+            return item_info["price"]
         else:
-            print("Invalid category. Please select a valid category.")
+            print("Item not added to order.")
+            return 0
+    else:
+        print("Invalid category. Please select a valid category.")
+        return 0
 
-# Collect orders
+# Collect your dates order
+print(f'Hi {date_name}, let\'s start with your order')
 while True:
-    process_order()
-    another = input("Would you like to order another item? (yes/no): ").strip().lower()
+    date_spent += process_order()
+    another = input("Would you like to add another item to your order? (yes/no): ").strip().lower()
     if another != 'yes':
+        budget -= date_spent
+        print(f"Remaining budget: ${budget:.2f}")
+        break
+
+# Collect your order
+print("And for you?")
+while True:
+    user_spent += process_order()
+    another = input("Would you like to add another item to your order? (yes/no): ").strip().lower()
+    if another != 'yes':
+        budget -= user_spent
+        print(f"Remaining budget: ${budget:.2f}")
         break
 
 # Confirm payment
+total_spent = date_spent + user_spent
 print("\n----- Final Check -----")
-print(f"Total spent: ${total_spent:.2f}")
-print(f"Remaining budget: ${budget:.2f}")
+print(f"Total spent (including tax): ${(total_spent + (total_spent * tax_rate)):.2f}")
+print(f"The final amount you have remaining in your budget is: ${budget - (total_spent * tax_rate):.2f}")
 payment_confirmation = input("Do you agree to pay the bill? (yes/no): ").strip().lower()
 
 if payment_confirmation == 'yes':
@@ -133,4 +150,8 @@ if payment_confirmation == 'yes':
 else:
     print("Please review your order and try again.")
 
-print(f"Your final budget is: ${budget:.2f}")
+if budget <= 0.00 and user_spent < date_spent:
+    print('Never again!')
+else:
+    print(f'You should take {date_name} on a second date!')
+
