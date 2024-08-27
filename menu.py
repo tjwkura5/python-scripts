@@ -1,3 +1,5 @@
+import pprint
+
 menu = {
     "entrees": {
         "pizza": {
@@ -53,3 +55,7 @@ menu = {
         }
     }
 }
+
+print("\n----- Checkout our menu! -----\n")
+# Use json.dumps to print the restaurant menu
+pprint.pprint(menu)

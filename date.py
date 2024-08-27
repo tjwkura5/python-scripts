@@ -1,4 +1,4 @@
-import json
+import json, pprint
 
 menu = {
     "entrees": {
@@ -81,6 +81,10 @@ print("Your budget is: $" + str(budget))
 print("\n----- Checkout our menu! -----\n")
 # Use json.dumps to print the restaurant menu
 print(json.dumps(menu, indent=4))
+# We can also use pretty print
+print("\n----- Pretty Print menu -----\n")
+pprint.pprint(menu)
+
 
 # Function to get item choice and validate
 def get_order_item(category):
@@ -122,8 +126,13 @@ def process_order():
 print(f'Hi {date_name}, let\'s start with your order')
 while True:
     date_spent += process_order()
-    another = input("Would you like to add another item to your order? (yes/no): ").strip().lower()
-    if another != 'yes':
+    while True:
+        another = input("Would you like to add another item to your order? (yes/no): ").strip().lower()
+        if another in ['yes', 'no']:
+            break
+        else:
+            print("Invalid input. Please select 'yes' or 'no'.")
+    if another == 'no':
         budget -= date_spent
         print(f"Remaining budget: ${budget:.2f}")
         break
@@ -132,11 +141,17 @@ while True:
 print("And for you?")
 while True:
     user_spent += process_order()
-    another = input("Would you like to add another item to your order? (yes/no): ").strip().lower()
-    if another != 'yes':
+    while True:
+        another = input("Would you like to add another item to your order? (yes/no): ").strip().lower()
+        if another in ['yes', 'no']:
+            break
+        else:
+            print("Invalid input. Please select 'yes' or 'no'.")
+    if another == 'no':
         budget -= user_spent
         print(f"Remaining budget: ${budget:.2f}")
         break
+
 
 # Confirm payment
 total_spent = date_spent + user_spent
