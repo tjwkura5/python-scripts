@@ -90,6 +90,9 @@ pprint.pprint(menu)
 def get_order_item(category):
     while True:
         item = input(f"Select a(n) {category} item from the menu: ").strip().lower()
+        # checks whether item is present in a specific list or collection.
+        # This is a list comprehension that generates a list of lowercase versions of 
+        # the keys in a specific dictionary.
         if item in [key.lower() for key in menu[category].keys()]:
             return item
         else:
@@ -109,6 +112,8 @@ def process_order():
         item_info = menu[category][item]
         print(f"\nYou selected: {item.capitalize()}")
         print(f"Description: {item_info['description']}")
+       # .2f: This is a format specifier that tells Python to format the number as a floating-point 
+        # number with 2 decimal places.
         print(f"Price: ${item_info['price']:.2f}")
 
         confirm = input("Would you like to add this to your order? (yes/no): ").strip().lower()
