@@ -23,6 +23,6 @@ for path in os.listdir(directory):
     if os.path.isdir(os.path.join(directory, path)):
         dir_num += 1
 
-print(f' The number of files in this directory is {files_num}')
+print(f'The number of files in this directory is {files_num}')
 
 print(f'The number of directories in this directory is {dir_num}')
