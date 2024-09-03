@@ -9,19 +9,10 @@ while True:
     else:
         print("Directory does not exist, please provide a valid directory")
 
-files_num = 0
-# set to negative one to not count the existing directory
-dir_num = -1
+dir_num = len([path for path in os.listdir(directory) if os.path.isdir(os.path.join(directory, path))]) - 1
 
-for path in os.listdir(directory):
-    # check if current path is a file
-    if os.path.isfile(os.path.join(directory, path)):
-        files_num += 1
+files_num = len([path for path in os.listdir(directory) if os.path.isfile(os.path.join(directory, path))])
 
-for path in os.listdir(directory):
-    # check if current path is a dir
-    if os.path.isdir(os.path.join(directory, path)):
-        dir_num += 1
 
 print(f'The number of files in this directory is {files_num}')
 
