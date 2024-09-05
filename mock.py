@@ -14,16 +14,11 @@ def flights():
     except requests.exceptions.RequestException as e:
         print(f'An error occured: {e}')
 
-
-
-
 flight_data = flights()
 response = flight_data.json()
 date = '2024-10-21'
 
 new_list = [flight for flight in response['data'] if flight['depart_date'] == date]
 
-# print(new_list)
-first_item = new_list[0]
-
-print(f'There is a flight from {first_item['origin']} to {first_item['destination']} scheduled on {date} with a duration of {first_item['duration']} min.')
+for item in new_list:
+    print(f'There is a flight from {item['origin']} to {item['destination']} scheduled on {date} with a duration of {item['duration']} min.')
