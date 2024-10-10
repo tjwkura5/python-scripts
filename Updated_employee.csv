@@ -1,0 +1,51 @@
+Name,Age,Joining Date,Department,Salary
+Frank,30,,,62000
+Alice,29,2023-05-01,HR,55000
+alice ,40,2023-05-01,Marketing,
+Henry,,12-11-2020,Marketing,70000
+Frank,29,2021-12-15,Finance,55000
+Eve,29,2021-12-15,IT,70000
+Bob,,2021-12-15,Marketing,70000
+Bob,thirty-five,,Finance,fifty-five thousand
+George,29,2021-12-15,,70000
+George,twenty-six,01/01/2020,HR,55000
+Bob,25,2023-05-01,IT ,62000
+alice ,twenty-six,2023-05-01,HR,70000
+George,40,2021-12-15,finance,70000
+Bob,29,,finance,
+George,25,12/25/2022,,sixty thousand
+alice ,25,2023-05-01, R&D,70000
+Bob,28,2023-05-01,Marketing,72000
+Charlie,thirty-five,2019/11/12, R&D,fifty-five thousand
+Bob,28,2021-12-15,IT ,fifty-five thousand
+George,29,2023-05-01,Marketing,sixty thousand
+Henry,25,2023-05-01,IT,fifty-five thousand
+Alice,,,IT,55000
+Henry,twenty-six,2019/11/12,Marketing,62000
+Alice,25,2023-05-01,,fifty-five thousand
+Alice,29,2023-05-01, R&D,70000
+Eve,thirty-five,2023-05-01, R&D,55000
+Charlie,30,2023-05-01,Finance,55000
+Alice,25,2021-12-15,finance,62000
+George,thirty-five,12/25/2022,Marketing,70000
+Bob,29,2019/11/12,,
+Charlie,twenty-six,,HR,70000
+alice ,twenty-six,2023-05-01,IT,62000
+Frank,twenty-six,2023-05-01, R&D,fifty-five thousand
+,thirty-five,2023-05-01,,62000
+Charlie,thirty-five,,,70000
+alice ,30,12/25/2022,IT,72000
+Bob,twenty-six,2021-12-15,Finance,
+alice ,35,2023-05-01,HR,62000
+Alice,twenty-six,2023-05-01,Marketing,70000
+Bob,thirty-five,2021-12-15,HR,sixty thousand
+Alice,25,01/01/2020,IT,70000
+George,30,2019/11/12,HR,72000
+alice ,35,2019/11/12,HR,55000
+,28,12/25/2022,IT,55000
+,thirty-five,2021-12-15, R&D,fifty-five thousand
+Frank,25,12-11-2020,HR,fifty-five thousand
+George,40,12-11-2020,Finance,fifty-five thousand
+Frank,25,,HR,70000
+Charlie,40,12-11-2020,HR,62000
+,,2021-12-15,IT,

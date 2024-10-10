@@ -1,0 +1,51 @@
+EmployeeID,Name,Department,Age,Salary,City,Years of Experience
+1,Employee1,HR,22,50000,New York,1
+2,Employee2,Finance,34,75000,Los Angeles,8
+3,Employee3,IT,29,68000,Chicago,5
+4,Employee4,Sales,41,55000,Houston,10
+5,Employee5,Marketing,37,72000,Phoenix,6
+6,Employee6,HR,25,60000,New York,3
+7,Employee7,Finance,30,62000,Los Angeles,7
+8,Employee8,IT,28,52000,Chicago,4
+9,Employee9,Sales,40,67000,Houston,12
+10,Employee10,Marketing,35,59000,Phoenix,9
+11,Employee11,HR,22,50000,New York,1
+12,Employee12,Finance,34,75000,Los Angeles,8
+13,Employee13,IT,29,68000,Chicago,5
+14,Employee14,Sales,41,55000,Houston,10
+15,Employee15,Marketing,37,72000,Phoenix,6
+16,Employee16,HR,25,60000,New York,3
+17,Employee17,Finance,30,62000,Los Angeles,7
+18,Employee18,IT,28,52000,Chicago,4
+19,Employee19,Sales,40,67000,Houston,12
+20,Employee20,Marketing,35,59000,Phoenix,9
+21,Employee21,HR,22,50000,New York,1
+22,Employee22,Finance,34,75000,Los Angeles,8
+23,Employee23,IT,29,68000,Chicago,5
+24,Employee24,Sales,41,55000,Houston,10
+25,Employee25,Marketing,37,72000,Phoenix,6
+26,Employee26,HR,25,60000,New York,3
+27,Employee27,Finance,30,62000,Los Angeles,7
+28,Employee28,IT,28,52000,Chicago,4
+29,Employee29,Sales,40,67000,Houston,12
+30,Employee30,Marketing,35,59000,Phoenix,9
+31,Employee31,HR,22,50000,New York,1
+32,Employee32,Finance,34,75000,Los Angeles,8
+33,Employee33,IT,29,68000,Chicago,5
+34,Employee34,Sales,41,55000,Houston,10
+35,Employee35,Marketing,37,72000,Phoenix,6
+36,Employee36,HR,25,60000,New York,3
+37,Employee37,Finance,30,62000,Los Angeles,7
+38,Employee38,IT,28,52000,Chicago,4
+39,Employee39,Sales,40,67000,Houston,12
+40,Employee40,Marketing,35,59000,Phoenix,9
+41,Employee41,HR,22,50000,New York,1
+42,Employee42,Finance,34,75000,Los Angeles,8
+43,Employee43,IT,29,68000,Chicago,5
+44,Employee44,Sales,41,55000,Houston,10
+45,Employee45,Marketing,37,72000,Phoenix,6
+46,Employee46,HR,25,60000,New York,3
+47,Employee47,Finance,30,62000,Los Angeles,7
+48,Employee48,IT,28,52000,Chicago,4
+49,Employee49,Sales,40,67000,Houston,12
+50,Employee50,Marketing,35,59000,Phoenix,9
